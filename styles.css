@@ -57,6 +57,13 @@ header {
     margin: 5px 0;
     font-size: 1.1em;
     color: #555;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-info svg {
+    vertical-align: middle;
 }
 
 /* Section styles */
@@ -72,7 +79,8 @@ section h2 {
     margin-bottom: 10px;
 }
 
-section p {
+section p,
+section ul {
     font-size: 1em;
     color: #555;
     line-height: 1.5;
@@ -81,7 +89,6 @@ section p {
 section ul {
     list-style-type: square;
     margin-left: 20px;
-    color: #333;
 }
 
 .experience-item {
@@ -98,4 +105,26 @@ section ul {
     margin: 5px 0;
     font-size: 0.95em;
     color: #777;
+}
+
+/* Adjust spacing for nested items */
+.experience-item ul {
+    margin-top: 5px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-info h1 {
+        font-size: 2em;
+    }
+
+    .header-info p {
+        font-size: 1em;
+    }
 }
